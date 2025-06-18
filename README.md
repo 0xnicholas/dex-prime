@@ -63,3 +63,7 @@ monoli-dex/
     │       └── state/           # vault, position, market, funding 等
     └── Anchor.toml
 ```
+
+Docs
+- [Monoli Dex Dev.](https://nicholas.feishu.cn/wiki/CvqYwM7eliHImLkSGmPcSPByn6d)
+- [Monoli](https://github.com/0xnicholas/monoli)
