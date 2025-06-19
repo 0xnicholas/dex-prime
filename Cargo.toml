@@ -1,0 +1,16 @@
+[workspace.package]
+authors = ["Lico Labs<hi@licolabs.xyz>"]
+homepage = "https://github.com/0xnicholas/dex-prime"
+license = "GPL-3.0-only"
+repository = "https://github.com/0xnicholas/dex-prime.git"
+edition = "2024"
+
+[workspace]
+members = [
+    "engine",
+    "settlement",
+]
+resolver = "2"
+
+[workspace.dependencies]
+ordered-float = "4.6.0"
