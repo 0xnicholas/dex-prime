@@ -6,11 +6,15 @@ repository = "https://github.com/0xnicholas/dex-prime.git"
 edition = "2024"
 
 [workspace]
-members = [
-    "engine",
+members = [ "chain_adapter", "common",
+    "engine", "executor",
     "settlement",
 ]
 resolver = "2"
 
 [workspace.dependencies]
 ordered-float = "4.6.0"
+anyhow = "1.0.98"
+serde = "1.0.219"
+common = { path = "./common"}
+chain_adapter = { path = "./chain_adapter"}

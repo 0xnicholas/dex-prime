@@ -1,4 +1,4 @@
-use crate::types::{Order, MatchResult};
+use common::types::{Order, MatchResult};
 use crate::orderbook::OrderBook;
 use crate::matcher::match_order;
 

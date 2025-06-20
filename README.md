@@ -1,5 +1,5 @@
 # dex-prime
-DEX using CLOB, based on solana/monoli L1.
+Perp DEX using CLOB, based on Solana/Monoli L1.
 
 **codebase**
 ```
@@ -12,19 +12,23 @@ dex-prime/
 │   ├── execution.rs         # 成交执行器（生成事件）
 │   └── event.rs             # 成交事件定义
 
+├── indexer/                 # 交易索引/状态同步
+
 ├── settlement/              # 持仓、清算、资金管理
 │   ├── position.rs          # Position 状态、PNL、apply_trade
+│   ├── margin.rs          
 │   ├── liquidation.rs       # 清算检查与触发（多模式）
 │   └── funding.rs           # Funding rate 定期更新逻辑
 
-├── chain_adapter/           # 解耦底层链的适配器层
-│   ├── chain_tx.rs          # ChainTx 类型定义（统一格式）
-│   ├── solana_executor.rs   # 对 Solana 的链交互实现
-│   └── monoli_executor.rs      # Monoli交互实现
+├── executor/              # 提交执行链上交易
+│   ├── executor.rs         
 
-├── infra/                   # 数据服务层（状态、索引、持久化）
-│   ├── db.rs                # 内存态/Redis/SQL等持久层实现
-│   └── indexer.rs           # 撮合结果、订单流、快照等索引
+├── chain_adapter/           # 解耦底层链的适配器层
+│   ├── adapter_trait.rs          # 抽象链交互
+│   ├── solana.rs            
+│   └── monoli.rs      
+
+├── storage/                   # 持久化存储
 
 ├── gateway/                 # 用户入口层（API / websocket / gRPC）
 │   └── api.rs               # HTTP or WS 处理逻辑（非必须模块）

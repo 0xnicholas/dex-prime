@@ -1,6 +1,6 @@
 use std::collections::{BTreeMap, VecDeque, HashMap};
 use ordered_float::OrderedFloat;
-use crate::types::{Order, Side};
+use common::types::{Order, Side};
 
 pub struct OrderBook {
     pub bids: BTreeMap<OrderedFloat<f64>, VecDeque<Order>>,  // price FIFO

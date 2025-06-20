@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use crate::orderbook::OrderBook;
-use crate::types::Order;
+use common::types::{Order};
 use crate::matching::submit_order;
 use crate::execution::generate_events;
 use crate::event::EngineEvent;

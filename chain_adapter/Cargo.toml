@@ -1,0 +1,22 @@
+[package]
+name = "chain_adapter"
+version = "0.1.0"
+authors.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+common.workspace = true
+
+# Blockchain
+# Solana
+solana-sdk = { version = "2.2.1", optional = true }
+solana-client = { version = "2.2.1", optional = true }
+
+[features]
+default = []
+solana = ["solana-sdk", "solana-client"]
+monoli = []

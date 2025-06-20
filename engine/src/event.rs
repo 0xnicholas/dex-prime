@@ -1,4 +1,4 @@
-use crate::types::MatchResult;
+use common::types::MatchResult;
 
 #[derive(Debug)]
 pub enum EngineEvent {

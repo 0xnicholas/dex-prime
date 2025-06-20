@@ -1,4 +1,4 @@
-use crate::types::{Order, MatchResult, Side};
+use common::types::{Order, MatchResult, Side};
 use ordered_float::OrderedFloat;
 use crate::orderbook::OrderBook;
 
